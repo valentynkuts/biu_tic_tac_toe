@@ -1,35 +1,52 @@
+@statId-color: white;
+@win-color: yellow;
 body {
   font: 14px "Century Gothic", Futura, sans-serif;
   margin: 20px;
 }
-ol,
-ul {
+
+ol, ul {
   padding-left: 30px;
-  color: white;
+  color: @statId-color; 
+
 }
+
 .board-row:after {
   clear: both;
   content: "";
   display: table;
 }
+
 .status {
   margin-bottom: 10px;
 }
+
 .square:focus {
   outline: none;
 }
+
 .game {
   display: flex;
   flex-direction: row;
 }
+
 .game-info {
   margin-left: 40px;
 }
+
 #statId {
-  color: white;
+  color: @statId-color;
   margin-left: 30px;
+
+  & + div {
+    color: @win-color;
+    margin-left: 30px;
+  }
 }
-#statId + div {
-  color: yellow;
-  margin-left: 30px;
-}
+                         
+
+
+
+
+
+

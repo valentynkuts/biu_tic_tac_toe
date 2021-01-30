@@ -67,9 +67,9 @@ export default function Game() {
 
 
     let status;
+    let winnerPlayer;
     if (winner) {
-        //status = "Winner: " + winner;
-        status = winner === "X" ? "Winner: " + playerX : "Winner: " + playerO;
+        winnerPlayer = winner === "X" ? "Winner: " + playerX: "Winner: " + playerO;
     } else {
         status = "Next player: " + (xIsNext ? playerX + " (X)" : playerO + " (O)");
     }
@@ -93,9 +93,7 @@ export default function Game() {
 
     return (
         <>
-            <div className="game container">
-                <div className="row">
-
+            <div className="game">
                     <div className="game-board">
                         <Board
                             squares={history[stepNumber]}
@@ -105,10 +103,9 @@ export default function Game() {
 
                     <div className="game-info">
                         <div id="statId">{status}</div>
+                        <div style={{color: "yellow"}}>{winnerPlayer}</div>
                         <ul>{moves}</ul>
                     </div>
-
-                </div>
             </div>
             <br/>
             <button className="btn btn-outline-light btn-block btn-sm" onClick={save}>Save</button>

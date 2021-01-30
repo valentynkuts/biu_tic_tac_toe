@@ -1,47 +1,20 @@
 import React, {useState, useEffect} from "react";
-import Game from "./Game";
 import {Link, useHistory} from "react-router-dom";
 
 export default function Formularz() {
     let [val1, setVal1] = useState("");
     let [val2, setVal2] = useState("");
     let [size, setSize] = useState("");
-    //let [checkedValue, setCheckedValue] = useState("");
-    //let [selected, setSelected] = useState("");
-
-    let [show, setShow] = useState(false);
 
     const size1 = "40";
     const size2 = "60";
     const size3 = "80";
 
 
-    // useEffect(() => {
-    //     localStorage.setItem("checkbox-value", checked);
-    // });
-    //
-    // useEffect(() => {
-    //     localStorage.setItem("radio", radio);
-    // });
-
-    const submit = e => {
-        e.preventDefault();
-        show = true;
-        setShow(show);
-        // checkedValue = checked ? "checked" : "not checked" ;
-        //setCheckedValue(checkedValue);
-
-
-    };
-
     const reset = e => {
         e.preventDefault();
-        show = false;
-        setShow(show);
         size = "";
         setSize(size);
-        //checkedValue = checked ? "checked" : "not checked" ;
-        //setCheckedValue(checkedValue);
 
         val1 = ""
         setVal1(val1);
@@ -59,28 +32,16 @@ export default function Formularz() {
     function goToGame(e) {
         e.preventDefault();
         history.push("/game");
-        /*history.push({
-            pathname: '/game',
-            state: {
-                playerX: val1,
-                playerY: val2,
-                size: size
-            }
-        });*/
     }
-
-    //useEffect(() => window.localStorage.setItem("count", count), [count]);
 
     useEffect(() => {
         val1 = val1 === "" ? "PlayerX" : val1;
         localStorage.setItem("playerX", val1);
         val2 = val2 === "" ? "PlayerO" : val2;
         localStorage.setItem("playerO", val2);
-        //size = size === "" ? "60px" : size;
         localStorage.setItem("size", size);
 
     });
-
 
     return (
         <>
@@ -134,7 +95,7 @@ export default function Formularz() {
                 </label>
 
                 <button className="btn btn-outline-light btn-block btn-sm" onClick={goToGame}>Submit</button>
-                    <br/>
+                <br/>
                 <button className="btn btn-outline-light btn-block btn-sm" onClick={reset}>Reset</button>
             </form>
 
@@ -143,10 +104,7 @@ export default function Formularz() {
                 <Link to="/welcome">WELCOME</Link>
             </div>
 
-
-
         </>
-
 
     );
 }
