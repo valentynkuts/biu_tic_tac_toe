@@ -25,6 +25,16 @@ ul {
 .game-info {
   margin-left: 40px;
 }
+h3 {
+  color: white;
+}
+label {
+  margin-left: 10px;
+  color: white;
+}
+button {
+  margin: 2px;
+}
 #statId {
   color: white;
   margin-left: 30px;

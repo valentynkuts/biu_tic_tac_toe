@@ -93,7 +93,6 @@ export default function Formularz() {
                 <label>
                     {size3} X {size3}
                 </label>
-
                 <button className="btn btn-outline-light btn-block btn-sm" onClick={goToGame}>Submit</button>
                 <br/>
                 <button className="btn btn-outline-light btn-block btn-sm" onClick={reset}>Reset</button>
