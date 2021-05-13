@@ -1,6 +1,6 @@
 # tic_tac_toe
 
-- [tic-tac-toe](https://salty-hamlet-73866.herokuapp.com/welcome)
+- [tic_tac_toe → heroku](https://salty-hamlet-73866.herokuapp.com/welcome)
 
 ![Finished App](https://github.com/valentynkuts/biu_tic_tac_toe/blob/main/tictactoe.png)
 ------------------------------
