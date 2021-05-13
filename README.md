@@ -1,3 +1,10 @@
+# tic_tac_toe
+
+- [tic-tac-toe](https://salty-hamlet-73866.herokuapp.com/welcome)
+
+![Finished App](https://github.com/valentynkuts/biu_tic_tac_toe/blob/main/tictactoe.png)
+------------------------------
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
